@@ -42,19 +42,28 @@ message: 'Please enter the title of your project...',
                 type: 'input',
                 name: 'tests',
                 message: 'Please state here any tests that took place...'
-                }, 
-            
-
-];
+                }];
 
 // function to write README file
 function writeToFile(fileName, data) {
-} fs.writeFileSync(fileName, data);
+ fs.writeFileSync(fileName, data);
+}
 
 // function to initialize program
 function init() {
+    inquirer
+    .prompt(questions)
+    .then((answers) => {
+        const READMEContent = generateMarkdown(answers);
+        const outputFileName = 'README.md';
 
+
+        writeToFile(outputFileName, READMEContent);
+
+        console.log(`${outputFileName} successfully generated!`);
+    })
+    .catch((err) => console.error(err));
 }
 
-// function call to initialize program
+  // function call to initialize program
 init();
