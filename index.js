@@ -32,7 +32,7 @@ message: 'Please enter the title of your project...',
 
 // function to write README file
 function writeToFile(fileName, data) {
-}
+} fs.writeFileSync(fileName, data);
 
 // function to initialize program
 function init() {
