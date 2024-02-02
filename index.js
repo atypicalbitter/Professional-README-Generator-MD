@@ -27,6 +27,23 @@ message: 'Please enter the title of your project...',
             name: 'usage',
             message: 'Please enter details on how to correctly use your application...',
             }, 
+{
+            type: 'list',
+            name: 'license',
+            message: 'Please choose the License you used for this project...',
+            choices: ['MIT','GPLv2','Apache','Other']
+            }, 
+            {
+            type: 'input',
+            name: 'contributing',
+            message: 'Please enter details of anyone who contributed to this application...',
+            }, 
+            {
+                type: 'input',
+                name: 'tests',
+                message: 'Please state here any tests that took place...'
+                }, 
+            
 
 ];
 
