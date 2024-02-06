@@ -40,7 +40,7 @@ message: 'Please enter the title of your project...',
             }, 
             {
             type: 'input',
-            name: 'contributing',
+            name: 'contribution',
             message: 'Please enter details of anyone who contributed to this application...',
             }, 
             {
